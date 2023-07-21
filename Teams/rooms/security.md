@@ -125,6 +125,8 @@ If you're using the Microsoft Teams Rooms managed services component of Microsof
 - mmrprodemeastor.blob.core.windows.net
 - mmrprodnoamiot.azure-devices.net
 - mmrprodnoamstor.blob.core.windows.net
+- mmrprodgcciot.azure-devices.net
+- mmrprodgccstor.blob.core.windows.net
 
 Teams Rooms is configured to automatically keep itself patched with the latest Windows updates, including security updates. Teams Rooms installs any pending updates every day beginning at 2:00am using a pre-set local policy. There is no need to use additional tools to deploy and apply Windows Updates. Using additional tools to deploy and apply updates can delay the installation of Windows patches and thus lead to a less secure deployment. The Teams Rooms app is deployed using the Microsoft Store.
 
