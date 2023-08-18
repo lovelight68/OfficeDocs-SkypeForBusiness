@@ -47,7 +47,10 @@ Using Teams in a virtualized environment requires the following components.
 - **Virtualization broker**: The resource and connection manager to the virtualization provider, such as Azure.
 - **Virtual desktop**: The Virtual Machine (VM) stack that runs Teams.
 - **Thin client**: The device that the user physically interfaces with.
-- **Teams desktop app**: The Teams desktop client app.
+- **Teams desktop app**: The Teams desktop client app in the VM. This can be divided into three major sub-components:
+   - Desktop client: Win32 native app, installed via .exe (auto update enabled) or .msi (auto update disabled). *Version Example: 1.6.00.18681*
+   - Web client: a common component for both Teams native desktop app and web (browser) app, it auto updates every time the app starts (even in non-persistent environments). *Version Example: 1.0.0.2023052414.* 
+   - Shim: a VDI and VDI partner specific component that is bundled with the Web client, hence it auto updates. *Version Example: 1.14.0.1 (Citrix), 21494295 (VMware), 1.1.2206.13001 (AVD/W365)*
 
 ## Teams on VDI requirements
 
@@ -487,6 +490,7 @@ if($cleanup){
 - Azure Virtual Desktop doesn't support Linux-based clients at this time.
 - Fast tenant switch can result in calling-related issues on VDI such as screen sharing not available. Restarting the client will mitigate these issues.
 - Teams presence functions within VDI Teams client but does not resolve in Outlook.
+- When sharing the screen, the sharing toolbar is pinned to the top of the screen and cannot be unpinned.
 
 ### Notifications
 
@@ -542,3 +546,5 @@ Then, restart VDA. To learn more, see this Citrix support article, [Troubleshoot
 - [Bulk install Teams using Windows Installer (MSI)](msi-deployment.md)
 - [Teams PowerShell overview](teams-powershell-overview.md)
 - [Use Microsoft Teams on Azure Virtual Desktop](/azure/virtual-desktop/teams-on-wvd)
+
+
