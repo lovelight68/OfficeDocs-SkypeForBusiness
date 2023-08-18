@@ -121,6 +121,11 @@ mmrprodemeastor.blob.core.windows.net<br>
 mmrprodnoamiot.azure-devices.net<br>
 mmrprodnoamstor.blob.core.windows.net
 
+**GCC customers will also need access to the following destinations**
+
+mmrprodgcciot.azure-devices.net<br>
+mmrprodgccstor.blob.core.windows.net<br>
+
 ## Enrollment process
 
 The Enrollment process involves these steps:
